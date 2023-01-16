@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <div class="header__navegation">
+        <img class="header__icon-menu" src="./images/icon-menu.svg" alt="">
+        <img class="header__logo" src="./images/logo.svg" alt="">
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li><a class="navbar__link" href="#">Collections</a></li>
+            <li><a class="navbar__link" href="#">Men</a></li>
+            <li><a class="navbar__link" href="#">Women</a></li>
+            <li><a class="navbar__link" href="#">About</a></li>
+            <li><a class="navbar__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+
+      
+
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-navbar__icon" src="./images/icon-close.svg" alt="">
+          <ul class="modal-navbar__items">
+            <li> <a class="modal-navbar__link" href="">Collections</a> </li>
+            <li> <a class="modal-navbar__link" href="">Men</a> </li>
+            <li> <a class="modal-navbar__link" href="">Women</a> </li>
+            <li> <a class="modal-navbar__link" href="">About</a> </li>
+            <li> <a class="modal-navbar__link" href="">Contact</a> </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__card-avatar">
+        <div class="header-cart">
+          <div class="header-cart--notification">3</div>
+          <img class="header__cart" src="./images/icon-cart.svg" alt="">
+        </div>
+        
+        <img class="header__avatar" src="./images/image-avatar.png" alt="">
+      </div>
+
+    </header>
+    <section>
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img src="./images/icon-previous.svg" alt="">
+          <img src="./images/icon-next.svg" alt="">
+
+        </div>
+        <div>
+          <img src="./images/image-product-1-thumbnail.jpg" alt="">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+
+        </div>
+        
+      </article>
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+        <p class="details__paragraf">  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="details__price-container">
+          <p class="details__price-now">$125.00 <span class="details__discount">50%</span></p>
+          <p class="details__price-previus"> $250.00</p>
+        </div>
+        <div class="details__input-container">
+          <div class="details__input">
+            <img src="./images/icon-minus.svg" alt="">
+            <input type="number" value="0">
+            <img src="./images/icon-plus.svg" alt="">
+          </div>
+          <button> <img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+        </div>
+        
+
+      </article>
+    </section>
+    <!-- modal -->
+
+
+    <div class="modal-cart">
+      <p class="modal-cart__title">Cart</p>
+      <div class="modal-cart__buy">
+        <div class="modal-cart__product" >
+          <img src="./images/image-product-1-thumbnail.jpg" alt="">
+
+          <div>
+            <p class="modal-cart__product__title">Fall Limited Edition Sneakers</p>
+            <p class="modal-cart__product__price">$125.00 x 3 <span>375.00</span></p>
+          </div>
+          <img class="modal-cart__product__icon-delete" src="./images/icon-delete.svg" alt="">
+        </div>
+        <button class="modal-cart__checkout">Checkout</button>
+      </div>
+    </div>
+
+    <!-- fin modal -->
+
+
+
+
+  </main>
+
+
+
+
+ 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
