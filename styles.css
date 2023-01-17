@@ -24,7 +24,7 @@ body{
     --Black-modal: hsl(0, 0%, 0%, 0.5);
 }
 .main-container{
-    width: 375px;
+    width: 100%;
     margin: auto;
     position: relative;
     
@@ -253,6 +253,27 @@ body{
 .details__icon-plus:hover{
     cursor: pointer;
 
+}
+.details__button{
+    height: 60px;
+    width: 100%;
+    background-color: var(--Orange);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.details__button__icon{
+    
+}
+.modal-cart{
+    display: none;
 }
 
 
