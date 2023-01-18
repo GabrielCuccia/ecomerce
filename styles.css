@@ -40,7 +40,7 @@ body{
 }
 .header-cart{
     position: relative;
-    z-index: ;
+    
 
 }
 .header-cart:hover{
@@ -155,6 +155,7 @@ body{
 }
 .gallery__icon-next:hover{
     cursor: pointer;
+    
 
 }
 .gallery__thumbnails{
@@ -246,6 +247,8 @@ body{
 }
 .details__icon-minus:hover{
     cursor: pointer;
+    opacity: 0.7;
+    transition: 0.1s;
 }
 .details__icon-plus{
     background-color:var(--Light-grayish-blue);
@@ -258,6 +261,8 @@ body{
 }
 .details__icon-plus:hover{
     cursor: pointer;
+    opacity: 0.7;
+    transition: 0.1s;
 
 }
 .details__button{
@@ -285,7 +290,7 @@ body{
     display: none;
 }
 .modal-cart{
-    display: none;
+    display: flex;
     background-color: white;
     position: absolute;
     top: 90px;
@@ -317,7 +322,7 @@ body{
     
 }
 .modal-cart__detauls__empty{
-    display: flex;
+    display: grid;
     justify-content: center;
     height: 195px;
     align-items: center;
@@ -357,6 +362,12 @@ body{
     gap: 15px;
     margin-top: 30px;
     margin-bottom: 10px;
+
+}
+.modal-cart__checkout:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.15s;
 
 }
 
@@ -415,6 +426,15 @@ body{
         width: 80px;
         border-radius: 8px;
     }
+    .gallery__thumbnail:hover{
+        border: 3px solid var(--Orange);
+        cursor: pointer;
+        
+    }
+    .modal-cart{
+        width: 350px;
+        left: 800px;
+    }
     .gallery{
         width: 100%;
     }
@@ -468,6 +488,10 @@ body{
     }
     .header__avatar{
         width: 40px;
+    }
+    .modal-cart__checkout{
+        height: 50px;
+        font-size: 0.9em;
     }
 }
 

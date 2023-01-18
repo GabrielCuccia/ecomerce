@@ -48,7 +48,7 @@
       </div>
       <div class="header__card-avatar">
         <div id="headerCart" class="header-cart">
-          <div class="header-cart--notification">3</div>
+          <div id="notification" class="header-cart--notification">3</div>
           <img id="iconCart" class="header__cart" src="./images/icon-cart.svg" alt="">
         </div>
         
@@ -93,7 +93,7 @@
             <input id="inputNumber" class="details__input__input" type="number" value="0">
             <img id="plus" class="details__icon-plus" src="./images/icon-plus.svg" alt="">
           </div>
-          <button class="details__button"> <img class="details__button__icon" src="./images/icon-cart copy.svg" alt=""> Add to cart</button>
+          <button id="buyButton" class="details__button"> <img class="details__button__icon" src="./images/icon-cart copy.svg" alt=""> Add to cart</button>
         </div>
         
 
@@ -104,16 +104,16 @@
 
     <div id="modal-cart" class="modal-cart">
       <p class="modal-cart__title">Cart</p>
-      <p class="modal-cart__detauls__empty">Your cart is empty</p>
-      <div class="modal-cart__buy">
+      <p id="modal-empty" class="modal-cart__detauls__empty">Your cart is empty</p>
+      <div id="modal-cart-show" class="modal-cart__buy">
         
-        <div class="modal-cart__product" >
+        <div  class="modal-cart__product" >
           <img class="modal-cart__img" src="./images/image-product-1-thumbnail.jpg" alt="">
 
           <div class="modal-cart__details">
             
             <p class="modal-cart__product__title">Fall Limited Edition Sneakers</p>
-            <p class="modal-cart__product__price">$125.00 x 3 <span>375.00</span></p>
+            <p id="productPrice" class="modal-cart__product__price">$125.00 x 3 <span id="sumaUnidades">12</span></p>
           </div>
           <img class="modal-cart__product__icon-delete" src="./images/icon-delete.svg" alt="">
         </div>

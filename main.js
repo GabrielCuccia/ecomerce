@@ -7,8 +7,32 @@ let iconCart = document.querySelector("#iconCart")
 let modalCart = document.querySelector("#modal-cart")
 let headerCart = document.querySelector("#headerCart")
 let iconClose = document.querySelector("#modalIconClose")
+let notification = document.querySelector("#notification")
+let buyButton = document.querySelector("#buyButton")
+let cartShow = document.querySelector("#modal-cart-show")
+let empty = document.querySelector("#modal-empty")
+let sumaUnidades = document.querySelector("#sumaUnidades")
+let productPrice = document.querySelector("#productPrice")
+let productPriceFijo = 125.00;
+let totalProductos = 0;
 
 
+buyButton.addEventListener("click", ()=>{
+    if(inputNumber.value > 0){
+        totalProductos = 125.00 * inputNumber.value;
+        notification.style.display = "block"
+        notification.innerText = inputNumber.value
+        cartShow.style.display = "block"
+        empty.style.display = "none"
+        
+        productPrice.innerHTML = `125.00 x ${inputNumber.value} <span id="sumaUnidades">${totalProductos}</span>`
+        
+       
+
+       
+       
+    } 
+})
 
 iconCart.addEventListener("click", ()=>{
     if (modalCart.style.display == "grid"){
@@ -34,6 +58,7 @@ iconClose.addEventListener("click", ()=>{
 
 plus.addEventListener("click", ()=>{
     inputNumber.value++;
+    
 })
 minus.addEventListener("click", ()=>{
     if(inputNumber.value > 0){
