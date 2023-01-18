@@ -15,17 +15,78 @@ let sumaUnidades = document.querySelector("#sumaUnidades")
 let productPrice = document.querySelector("#productPrice")
 let productPriceFijo = 125.00;
 let totalProductos = 0;
+let img1 = document.querySelector("#img1")
+let img2 = document.querySelector("#img2")
+let img3 = document.querySelector("#img3")
+let img4 = document.querySelector("#img4")
+let principalImg = document.querySelector("#principal-img")
+let iconDelete = document.querySelector("#iconDelete")
+let iconNext = document.querySelector("#icon-next")
+let iconPrevius = document.querySelector("#icon-previus")
+let valorInicialImg = 1;
+
+
+iconPrevius.addEventListener("click", ()=>{
+    previus()
+    
+})
+iconNext.addEventListener("click", ()=>{
+    next()
+})
+
+
+
+iconDelete.addEventListener("click", ()=>{
+    cartShow.style.display = "none"
+    empty.style.display = "grid"
+    notification.style.display = "none"
+
+
+})
+
+img1.addEventListener("click", ()=>{
+    principalImg.style.backgroundImage = "url(./images/image-product-1.jpg)"
+    img1.style.opacity = "0.5"
+    img2.style.opacity = "1"
+    img3.style.opacity = "1"
+    img4.style.opacity = "1"
+})
+img2.addEventListener("click", ()=>{
+    principalImg.style.backgroundImage = "url(./images/image-product-2.jpg)"
+    img2.style.opacity = "0.5"
+    img1.style.opacity = "1"
+    img3.style.opacity = "1"
+    img4.style.opacity = "1"
+})
+img3.addEventListener("click", ()=>{
+    principalImg.style.backgroundImage = "url(./images/image-product-3.jpg)"
+    img3.style.opacity = "0.5"
+    img2.style.opacity = "1"
+    img1.style.opacity = "1"
+    img4.style.opacity = "1"
+})
+img4.addEventListener("click", ()=>{
+    principalImg.style.backgroundImage = "url(./images/image-product-4.jpg)"
+    img4.style.opacity = "0.5"
+    img2.style.opacity = "1"
+    img3.style.opacity = "1"
+    img1.style.opacity = "1"
+})
+
+
+
 
 
 buyButton.addEventListener("click", ()=>{
     if(inputNumber.value > 0){
-        totalProductos = 125.00 * inputNumber.value;
+        totalProductos = 125.00 * (inputNumber.value);
         notification.style.display = "block"
         notification.innerText = inputNumber.value
         cartShow.style.display = "block"
         empty.style.display = "none"
         
-        productPrice.innerHTML = `125.00 x ${inputNumber.value} <span id="sumaUnidades">${totalProductos}</span>`
+        productPrice.innerHTML = `125.00 x ${inputNumber.value} <span id="sumaUnidades">${totalProductos}.00</span>`
+        inputNumber.value = 0;
         
        
 
@@ -66,12 +127,29 @@ minus.addEventListener("click", ()=>{
     }
     
 })
+function next(){
+    valorInicialImg++;
+    if(valorInicialImg == 5){
+        valorInicialImg = 1;
+    }
+    
+    principalImg.style.backgroundImage = `url(./images/image-product-${valorInicialImg}.jpg)`
+    
+    
+    
 
-
-
-
-
-
-if (inputNumber.value == 0){
-    console.log("hola")
 }
+function previus(){
+    valorInicialImg--;
+    if(valorInicialImg == 0){
+        valorInicialImg = 4;
+    }
+   
+    principalImg.style.backgroundImage = `url(./images/image-product-${valorInicialImg}.jpg)`
+    
+    
+   
+
+}
+
+

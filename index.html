@@ -58,21 +58,21 @@
     </header>
     <section class="section">
       <article class="gallery">
-        <div class="gallery__image-container">
-          <div class="gallery__icon">
+        <div id="principal-img" class="gallery__image-container">
+          <div id="icon-previus"   class="gallery__icon">
             <img class="gallery__icon-previus" src="./images/icon-previous.svg" alt="">
           </div>
-          <div class="gallery__icon">
+          <div id="icon-next" class="gallery__icon">
             <img class="gallery__icon-next" src="./images/icon-next.svg" alt="">
 
           </div>
           
         </div>
         <div class="gallery__thumbnails">
-          <img class="gallery__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="">
-          <img class="gallery__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="">
-          <img class="gallery__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="">
-          <img class="gallery__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="">
+          <img id="img1" class="gallery__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="">
+          <img id="img2" class="gallery__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="">
+          <img id="img3" class="gallery__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="">
+          <img id="img4" class="gallery__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="">
 
         </div>
         
@@ -100,6 +100,28 @@
       </article>
     </section>
     <!-- modal -->
+    <div class="background__modal-gallery">
+      <div id="principal-img" class="modal__gallery__image-container">
+        <div class="gallery__icon">
+          <img  class="gallery__icon-previus" src="./images/icon-previous.svg" alt="">
+        </div>
+        <div  class="gallery__icon">
+          <img  class="gallery__icon-next" src="./images/icon-next.svg" alt="">
+  
+        </div>
+        
+      </div>
+      <div class="modal__gallery__thumbnails">
+        <img id="img1" class="gallery__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="">
+        <img id="img2" class="gallery__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="">
+        <img id="img3" class="gallery__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="">
+        <img id="img4" class="gallery__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="">
+  
+      </div>
+    </div>
+    
+    <!-- fin modal -->
+    <!-- modal -->
 
 
     <div id="modal-cart" class="modal-cart">
@@ -115,7 +137,7 @@
             <p class="modal-cart__product__title">Fall Limited Edition Sneakers</p>
             <p id="productPrice" class="modal-cart__product__price">$125.00 x 3 <span id="sumaUnidades">12</span></p>
           </div>
-          <img class="modal-cart__product__icon-delete" src="./images/icon-delete.svg" alt="">
+          <img id="iconDelete" class="modal-cart__product__icon-delete" src="./images/icon-delete.svg" alt="">
         </div>
         <button id="" class="modal-cart__checkout">Checkout</button>
       </div>
@@ -136,7 +158,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Gabriel Cuccia</a>.
   </div>
 
   <script src="./main.js"></script>
