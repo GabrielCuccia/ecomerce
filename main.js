@@ -24,6 +24,28 @@ let iconDelete = document.querySelector("#iconDelete")
 let iconNext = document.querySelector("#icon-next")
 let iconPrevius = document.querySelector("#icon-previus")
 let valorInicialImg = 1;
+let modalGallery = document.querySelector("#modalGallery")
+let galleryIcon1 = document.querySelector("#galleryIcon1")
+let galleryIcon2 = document.querySelector("#galleryIcon2")
+let iconCloseGallery = document.querySelector("#icon-close")
+let modalImg1 = document.querySelector("#modal-img1")
+let modalImg2 = document.querySelector("#modal-img2")
+let modalImg3 = document.querySelector("#modal-img3")
+let modalImg4 = document.querySelector("#modal-img4")
+let modalValorInicial = 1;
+let modalPrincipalImg = document.querySelector("#modal-principal-img")
+
+
+galleryIcon2.addEventListener("click", ()=>{
+    modalNext()
+})
+galleryIcon1.addEventListener("click", ()=>{
+    modalPrevius()
+})
+
+iconCloseGallery.addEventListener("click", ()=>{
+    modalGallery.style.display = "none"
+})
 
 
 iconPrevius.addEventListener("click", ()=>{
@@ -75,6 +97,30 @@ img4.addEventListener("click", ()=>{
 
 
 
+modalImg1.addEventListener("click", ()=>{
+    modalPrincipalImg.style.backgroundImage = "url(./images/image-product-1.jpg)"
+    modalPrincipalImg.style.backgroundPositionY = "-0px"
+    modalValorInicial = 1
+})
+modalImg2.addEventListener("click", ()=>{
+    modalPrincipalImg.style.backgroundImage = "url(./images/image-product-2.jpg)"
+    modalPrincipalImg.style.backgroundPositionY = "-0px"
+    modalValorInicial = 2
+})
+modalImg3.addEventListener("click", ()=>{
+    modalPrincipalImg.style.backgroundImage = "url(./images/image-product-3.jpg)"
+    modalPrincipalImg.style.backgroundPositionY = "-0px"
+    modalValorInicial = 3
+})
+modalImg4.addEventListener("click", ()=>{
+    modalPrincipalImg.style.backgroundImage = "url(./images/image-product-4.jpg)"
+    modalPrincipalImg.style.backgroundPositionY = "-0px"
+    modalValorInicial = 4
+})
+
+
+
+
 
 
 buyButton.addEventListener("click", ()=>{
@@ -85,7 +131,7 @@ buyButton.addEventListener("click", ()=>{
         cartShow.style.display = "block"
         empty.style.display = "none"
         
-        productPrice.innerHTML = `125.00 x ${inputNumber.value} <span id="sumaUnidades">${totalProductos}.00</span>`
+        productPrice.innerHTML = `125.00 x ${inputNumber.value} <span id="sumaUnidades">$${totalProductos}.00</span>`
         inputNumber.value = 0;
         
        
@@ -127,6 +173,13 @@ minus.addEventListener("click", ()=>{
     }
     
 })
+
+principalImg.addEventListener("click", ()=>{
+    modalGallery.style.display = "flex"
+    galleryIcon1.style.display = "block"
+    galleryIcon2.style.display = "block"
+})
+
 function next(){
     valorInicialImg++;
     if(valorInicialImg == 5){
@@ -146,6 +199,33 @@ function previus(){
     }
    
     principalImg.style.backgroundImage = `url(./images/image-product-${valorInicialImg}.jpg)`
+    
+    
+   
+
+}
+function modalNext(){
+    modalValorInicial++;
+    if(modalValorInicial == 5){
+        modalValorInicial = 1;
+    }
+    
+    modalPrincipalImg.style.backgroundImage = `url(./images/image-product-${modalValorInicial}.jpg)`
+    modalPrincipalImg.style.backgroundPositionY = "0px"
+    
+    
+    
+
+}
+function modalPrevius(){
+    modalValorInicial--;
+    if(modalValorInicial == 0){
+        modalValorInicial = 4;
+    }
+    
+   
+    modalPrincipalImg.style.backgroundImage = `url(./images/image-product-${modalValorInicial}.jpg)`
+    modalPrincipalImg.style.backgroundPositionY = "0px"
     
     
    
