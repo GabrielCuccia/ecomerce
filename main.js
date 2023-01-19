@@ -175,9 +175,12 @@ minus.addEventListener("click", ()=>{
 })
 
 principalImg.addEventListener("click", ()=>{
-    modalGallery.style.display = "flex"
-    galleryIcon1.style.display = "block"
-    galleryIcon2.style.display = "block"
+    if(window.innerWidth >= 1115){
+        modalGallery.style.display = "flex"
+        galleryIcon1.style.display = "block"
+        galleryIcon2.style.display = "block"
+    }
+    
 })
 
 function next(){
